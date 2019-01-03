@@ -129,10 +129,10 @@ model.add(Convolution2D(64, 3, 3, activation='relu'))
 # Add a flatten layer
 model.add(Flatten())
 
-# Add three fully connected layers (depth 100, 50, 10), tanh activation (and dropouts)
-model.add(Dense(100))
-model.add(Dense(50))
-model.add(Dense(10))
+# Add three fully connected layers (depth 100, 50, 10), activation (and dropouts)
+model.add(Dense(100, activation='relu'))
+model.add(Dense(50, activation='relu'))
+model.add(Dense(10, activation='relu'))
 
 # Add a fully connected output layer
 model.add(Dense(1))
